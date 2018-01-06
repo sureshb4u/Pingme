@@ -1,0 +1,83 @@
+.loginContainer{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 840px;
+    height: 400px
+}
+.loginCard{
+    background-color: #fff;
+    box-shadow: 
+        0px 5px 20px 2px rgba(0,0,0,.2), 
+        0 2px 2px 0 rgba(0,0,0,.14), 
+        0 1px 5px 0 rgba(0, 0, 0, 0.12) !important;   
+    padding: 40px;
+    float: left;
+    z-index: 10;
+    width: 313px;
+}
+.loginContainer .mat-card-title{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "abeezee";
+}
+.loginCard mat-form-field{
+    width: 100%;
+    padding-bottom: 10px;
+}
+.loginBtnContainer{
+    padding: 5px;
+    padding-top: 10px;
+}
+.forgetPwdLink{
+    text-align: right;
+    padding-top: 10px;
+    font-weight: bold;
+    font-family: "abeezee";
+}
+.loginBtn{
+    float: left;
+}
+.loginContainer button{
+    width: 150px;
+    border-radius: 25px;
+    background-color: #3B5999; 
+}
+.loginCard mat-card-content{
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+.loginFieldContainer label{
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    font-family: abeezee;
+    color: #ACACAC;
+    font-weight: bold;
+    padding-left: 4px;
+    font-size: 10px;
+}
+.registrationCard{
+    float: right;
+    background-color: #2b3145;
+    width: 400px;
+    color: #fff;
+    box-shadow: 
+    0px 5px 20px 2px rgba(0,0,0,.2), 
+    0 2px 2px 0 rgba(0,0,0,.14), 
+    0 1px 5px 0 rgba(0, 0, 0, 0.12) !important;  
+    font-family: "abeezee";
+}
+.registrationContainer{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 310px;
+    bottom: 0;
+}
+.registrationContainer mat-card-actions{padding-bottom: 10px !important;padding-left: 16px;}

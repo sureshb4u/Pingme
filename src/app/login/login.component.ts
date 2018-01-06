@@ -6,5 +6,5 @@ import { Constants } from '../app.constants';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  title = Constants.APPNAME;
+
 }

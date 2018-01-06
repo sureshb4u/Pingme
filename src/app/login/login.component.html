@@ -1,3 +1,49 @@
-<div class="login"> 
-    LOGIN
+<div class="loginContainer"> 
+    <mat-card class="loginCard">
+        <mat-card-header>
+            <mat-card-title>Sign in</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div>
+                <div class="loginFieldContainer">
+                    <div>
+                        <label>username</label>
+                        <mat-form-field><input matInput ></mat-form-field>
+                    </div>
+                    <div>
+                            <label>password</label>
+                        <mat-form-field><input type="password" matInput ></mat-form-field>
+                    </div>
+                </div>
+                <div class="loginBtnContainer">
+                    <div class="loginBtn">
+                            <button mat-raised-button color="primary">Login</button>
+                    </div>
+                    <div class="forgetPwdLink">
+                        <span>Forget Password?</span>
+                    </div>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <div class="registrationContainer">
+        <mat-card class="registrationCard">
+            <mat-card-header>
+                    <mat-card-title>Welcome to Pingme</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                    Ping me is an Bulk messaging service you can mail or send messages to your customers in a single click.                
+                </p>
+                <p>
+                    Manage your contacts in one place,form groups on your customers and define templates for all your services.
+                    All you have to do i just regiter your mail id and get a free service for a year!!!. Yes! you heard it right
+                    you will get a free service for an year after registering.
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                    <button mat-raised-button color="primary">Register</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
 </div>

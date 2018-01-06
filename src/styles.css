@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+html,body{
+    height: 100%;   
+    margin: 0;
+}
+body{
+    background-color: #fafbfc;   
+}
+.loginCard .mat-card-header-text{
+    padding: 5px;
+    text-align: center;
+    margin: auto !important;
+}
+.loginCard .mat-input-underline{
+    display: none;
+}
+.loginCard .mat-input-infix{
+    border: 1px solid #efefef;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-bottom: 0px;
+    height: 25px;
+    background-color: #F1F2F7;
+}
+.loginCard .mat-input-element{
+    top: 2px;
+    position: relative;
+    font-family: "Actor";
+    font-weight: "bold";
+}
+.loginCard mat-form-field{
+    padding-top: 5px;
+}
+.loginContainer button span{
+    font-family: "abeezee";
+    color: #ffff;
+}
+.registrationContainer .mat-card-header-text{margin-left: 0px;}
+.registrationContainer .mat-card-header-text .mat-card-title{margin-bottom: 25px;}
+
+@font-face {
+    font-family: "Advent-regular";
+    src: url("/assets/fonts/advent-pro/AdventPro-Regular.ttf");
+}
+@font-face {
+    font-family: "Advent-Bold";
+    src: url("/assets/fonts/advent-pro/AdventPro-Bold.ttf");
+}    
+@font-face {
+    font-family: "Advent-Thin";
+    src: url("/assets/fonts/advent-pro/AdventPro-Thin.ttf");
+}    
+@font-face {
+    font-family: "Actor";
+    src: url("/assets/fonts/actor/Actor-Regular.ttf");
+}
+@font-face {
+    font-family: "abeezee";
+    src: url("/assets/fonts/abeezee/ABeeZee-Regular.ttf");
+}
+@font-face {
+    font-family: "abeezee-italic";
+    src: url("/assets/fonts/abeezee/ABeeZee-Italic.ttf.ttf");
+}
