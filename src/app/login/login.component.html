@@ -4,26 +4,40 @@
             <mat-card-title>Sign in</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <div>
+            <form [formGroup]="loginForm" (ngSubmit)="loginForm.valid && signInUser(loginForm)" novalidate>
                 <div class="loginFieldContainer">
-                    <div>
+                    <div  [class.submittedForm]="formSubmitted && !loginForm.controls['userName'].valid">
                         <label>username</label>
-                        <mat-form-field><input matInput ></mat-form-field>
+                        <div>
+                            <mat-icon class="mat18">person</mat-icon>
+                            <mat-form-field>
+                                <input matInput type="text" formControlName="userName"  email="true">
+                                <div class="errorMsg" *ngIf="formSubmitted && !loginForm.controls['userName'].valid"> {{invalidEmail}} </div>
+                            </mat-form-field>
+                            
+                        </div>
                     </div>
-                    <div>
-                            <label>password</label>
-                        <mat-form-field><input type="password" matInput ></mat-form-field>
+                    <div [class.submittedForm]="formSubmitted && !loginForm.controls['password'].valid">
+                        <label>password</label>
+                        <div>
+                            <mat-icon class="mat18">lock</mat-icon>
+                            <mat-form-field>
+                                <input type="password" matInput formControlName="password" >
+                                <div class="errorMsg" *ngIf="formSubmitted && !loginForm.controls['password'].valid"> {{invalidPassword}} </div>
+                            </mat-form-field>
+                            
+                        </div>
                     </div>
                 </div>
                 <div class="loginBtnContainer">
                     <div class="loginBtn">
-                            <button mat-raised-button color="primary">Login</button>
+                            <button mat-raised-button color="primary" (click)="submitForm(loginForm)">Login</button>
                     </div>
                     <div class="forgetPwdLink">
                         <span>Forget Password?</span>
                     </div>
                 </div>
-            </div>
+            </form>
         </mat-card-content>
     </mat-card>
     <div class="registrationContainer">
@@ -33,12 +47,12 @@
             </mat-card-header>
             <mat-card-content>
                 <p>
-                    Ping me is an Bulk messaging service you can mail or send messages to your customers in a single click.                
+                    Ping me is a Bulk messaging service you can mail or send messages to your customers in a single click.                
                 </p>
                 <p>
-                    Manage your contacts in one place,form groups on your customers and define templates for all your services.
-                    All you have to do i just regiter your mail id and get a free service for a year!!!. Yes! you heard it right
-                    you will get a free service for an year after registering.
+                    Manage your contacts in one place,Form groups on your customers and define templates for all your services.
+                    All you have to do is just register your mail id and get a free service for a year!!!. Yes! you heard it right
+                    You will get a free service for an year after registering.
                 </p>
             </mat-card-content>
             <mat-card-actions>

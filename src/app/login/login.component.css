@@ -6,7 +6,8 @@
     bottom: 0;
     left: 0;
     width: 840px;
-    height: 400px
+    height: 400px;
+    font-family: "abeezee" !important;
 }
 .loginCard{
     background-color: #fff;
@@ -27,7 +28,7 @@
 }
 .loginCard mat-form-field{
     width: 100%;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 .loginBtnContainer{
     padding: 5px;
@@ -42,7 +43,7 @@
 .loginBtn{
     float: left;
 }
-.loginContainer button{
+.loginContainer button,.loginbtn{
     width: 150px;
     border-radius: 25px;
     background-color: #3B5999; 
@@ -57,7 +58,7 @@
     font-family: abeezee;
     color: #ACACAC;
     font-weight: bold;
-    padding-left: 4px;
+    padding-left: 10px;
     font-size: 10px;
 }
 .registrationCard{
@@ -81,3 +82,13 @@
     bottom: 0;
 }
 .registrationContainer mat-card-actions{padding-bottom: 10px !important;padding-left: 16px;}
+.login-submit{display: none;}
+.loginCard .submittedForm .material-icons,.loginCard .submittedForm label{color: #CC0B0B;}
+.errorMsg{
+    padding-top: 20px;
+    position: absolute;
+    left: 10px;
+    color: #CC0B0B; 
+    font-family: "Actor";
+    font-weight: bold;
+}

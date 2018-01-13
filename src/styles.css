@@ -4,9 +4,10 @@
 html,body{
     height: 100%;   
     margin: 0;
+   
 }
 body{
-    background-color: #EDF0F4;   
+    background-image:url('assets/images/bg.png');   
 }
 .loginCard .mat-card-header-text{
     padding: 5px;
@@ -19,7 +20,7 @@ body{
 .loginCard .mat-input-infix{
     border: 1px solid #efefef;
     border-radius: 15px;
-    padding-left: 15px;
+    padding-left: 32px;
     padding-bottom: 0px;
     height: 25px;
     background-color: #F1F2F7;
@@ -39,6 +40,41 @@ body{
 }
 .registrationContainer .mat-card-header-text{margin-left: 0px;}
 .registrationContainer .mat-card-header-text .mat-card-title{margin-bottom: 25px;}
+.material-icons.mat12{font-size: 12px;height: 12px;width: 12px;}
+.material-icons.mat14{font-size: 14px;height: 14px;width: 14px;}
+.material-icons.mat16{font-size: 16px;height: 16px;width: 16px;}
+.material-icons.mat18{font-size: 18px;height: 18px;width: 18px;}
+.loginFieldContainer .material-icons{
+    position: absolute;
+    z-index: 1;
+    color: grey;
+    padding: 10px;
+    padding-left: 12px;
+    padding-top: 12px;
+}
+.loginCard .mat-focused .mat-input-infix{border-color: grey; }
+.loginCard .submittedForm .ng-invalid.mat-focused .mat-input-infix{border:1px solid #CC0B0B;}
+.loginContainer .mat-button-ripple{border-radius: 25px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @font-face {
     font-family: "Advent-regular";
