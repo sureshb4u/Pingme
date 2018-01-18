@@ -9,23 +9,24 @@ html,body{
 body{
     background-image:url('assets/images/bg.png');   
 }
-.loginCard .mat-card-header-text{
+.custom .mat-card-header-text{
     padding: 5px;
     text-align: center;
     margin: auto !important;
 }
-.loginCard .mat-input-underline{
+.custom .mat-input-underline{
     display: none;
 }
-.loginCard .mat-input-infix{
+.custom .mat-input-infix{
     border: 1px solid #efefef;
     border-radius: 15px;
     padding-left: 32px;
     padding-bottom: 0px;
     height: 25px;
     background-color: #F1F2F7;
+    box-shadow: 0px 2px 5px 0px rgba(51, 47, 47, 0.3);
 }
-.loginCard .mat-input-element{
+.custom .mat-input-element{
     top: 2px;
     position: relative;
     font-family: "Actor";
@@ -52,9 +53,11 @@ body{
     padding-left: 12px;
     padding-top: 12px;
 }
-.loginCard .mat-focused .mat-input-infix{border-color: grey; }
-.loginCard .submittedForm .ng-invalid.mat-focused .mat-input-infix{border:1px solid #CC0B0B;}
+.custom .mat-focused .mat-input-infix{border-color: grey; }
+.custom .submittedForm .ng-invalid.mat-focused .mat-input-infix{border:1px solid #CC0B0B;}
 .loginContainer .mat-button-ripple{border-radius: 25px;}
+.flt{float: left;}
+.w25p{width: 25%;}.w50p{width: 50%;}.w98p{width: 98%;}.w100p{width: 100%;}
 
 
 

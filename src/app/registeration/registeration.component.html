@@ -1,0 +1,56 @@
+<div class="registrationContainer">
+  <mat-card class="registrationCard custom">
+      <mat-card-header>
+              <mat-card-title>Create Account</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+          <div class="feildContainer">
+            <label class="flt">company name</label>
+            <mat-form-field class="flt w98p">
+              <input matInput type="text">
+              <div class="errorMsg" > </div>
+            </mat-form-field>
+            <div>
+              <div class="flt w50p">
+                  <label>company phone no</label>
+                  <mat-form-field>
+                    <input matInput type="text" >
+                    <div class="errorMsg" ></div>
+                  </mat-form-field>  
+              </div>  
+              <div class="flt w50p">
+                  <label>company email</label>
+                  <mat-form-field>
+                    <input matInput type="text" email="true">
+                    <div class="errorMsg"> </div>
+                  </mat-form-field>
+              </div>
+            </div>
+            <label class="flt">name</label>
+            <mat-form-field class="flt w98p">
+              <input matInput type="text">
+              <div class="errorMsg"> </div>
+            </mat-form-field>
+            <div>
+              <div class="flt w50p">
+                  <label>userName</label>
+                  <mat-form-field>
+                    <input matInput type="text" email="true">
+                    <div class="errorMsg"></div>
+                  </mat-form-field>  
+              </div>
+              <div class="flt w50p">
+                  <label>password</label>
+                  <mat-form-field>
+                    <input matInput type="password">
+                    <div class="errorMsg"> </div>
+                  </mat-form-field>
+              </div>
+            </div>
+          </div>
+      </mat-card-content>
+      <mat-card-actions>
+              <button class="registerUser" mat-raised-button color="primary" (click)="registerUser()">Register</button>
+      </mat-card-actions>
+  </mat-card>
+</div>

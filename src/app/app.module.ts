@@ -9,12 +9,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './/app-routing.module';
 import { LoginService } from './login.service';
+import { RegisterationComponent } from './registeration/registeration.component';
+import { ApiConfigService } from './api-config.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterationComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,7 @@ import { LoginService } from './login.service';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [LoginService],
+  providers: [LoginService, ApiConfigService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

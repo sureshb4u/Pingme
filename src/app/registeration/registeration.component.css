@@ -1,0 +1,40 @@
+.registrationContainer{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 500px;
+    height: 400px;
+}
+.registrationCard{
+    font-family: "abeezee" !important;
+    box-shadow: 0px 5px 20px 2px rgba(0,0,0,.2), 
+    0 2px 2px 0 rgba(0,0,0,.14), 
+    0 1px 5px 0 rgba(0, 0, 0, 0.12) !important;
+}
+.registrationContainer .mat-card-title{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "abeezee";
+}
+.feildContainer label{
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    font-family: abeezee;
+    color: #ACACAC;
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 10px;
+}
+.feildContainer{
+    min-height: 200px;
+}
+.registrationCard mat-card-actions{
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 65px; 
+}
+.registerUser{width: 75%;border-radius: 25px;background-color: #3B5999;}    

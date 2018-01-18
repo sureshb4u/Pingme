@@ -3,6 +3,7 @@ import { Constants } from '../app.constants';
 import { FormsModule, ReactiveFormsModule, EmailValidator } from '@angular/forms';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoginService } from '../login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +18,8 @@ export class LoginComponent {
 
   constructor(
    private fb: FormBuilder,
-   private loginService: LoginService
+   private loginService: LoginService,
+   private router: Router
  ) {
  this.loginForm = fb.group({
    'userName' : [null, Validators.required],
@@ -35,4 +37,7 @@ export class LoginComponent {
     console.log("Login Successfull");
   }
 
+  registerUser(){
+    this.router.navigate(["/register"]);
+  }
 }
