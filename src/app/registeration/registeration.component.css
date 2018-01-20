@@ -35,6 +35,35 @@
 .registrationCard mat-card-actions{
     margin: 0 auto;
     text-align: center;
-    padding-top: 65px; 
+    padding-top: 75px; 
 }
 .registerUser{width: 75%;border-radius: 25px;background-color: #3B5999;}    
+.errorMsg{
+    padding-top: 20px;
+    position: absolute;
+    left: 10px;
+    color: #CC0B0B; 
+    font-family: "Actor";
+    font-weight: bold;
+    font-size: 12px;
+}
+.invalidField{color: #CC0B0B !important;}
+.errBanner{    
+    text-align: center;
+    background: rgba(197, 23, 23, 0.77);
+    color: #fff;
+    animation: 1s ease-out 0s 1 fallDown;
+    height: 30px;
+    font-family: "Actor";
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+@keyframes fallDown{
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

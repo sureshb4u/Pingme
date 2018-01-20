@@ -4,53 +4,69 @@
               <mat-card-title>Create Account</mat-card-title>
       </mat-card-header>
       <mat-card-content>
+        <form #registerationForm="ngForm" novalidate>
           <div class="feildContainer">
-            <label class="flt">company name</label>
+            <label class="flt" [class.invalidField]="!registerationObj.companyName && formSubmitted">
+              company name*
+            </label>
             <mat-form-field class="flt w98p">
-              <input matInput type="text">
-              <div class="errorMsg" > </div>
+              <input matInput type="text" required name="companyName" [(ngModel)]="registerationObj.companyName">
             </mat-form-field>
             <div>
               <div class="flt w50p">
                   <label>company phone no</label>
-                  <mat-form-field>
-                    <input matInput type="text" >
-                    <div class="errorMsg" ></div>
+                  <mat-form-field class="pt5">
+                    <input matInput type="text" name="companyPhone" [(ngModel)]="registerationObj.companyPhone">
                   </mat-form-field>  
               </div>  
               <div class="flt w50p">
                   <label>company email</label>
-                  <mat-form-field>
-                    <input matInput type="text" email="true">
-                    <div class="errorMsg"> </div>
+                  <mat-form-field class="pt5">
+                    <input matInput type="text" name="companyName" 
+                      email="validateEmail" #companyMail="ngModel"  (ngModelChange)="validateMail(registerationObj.companyMail)" 
+                      [(ngModel)]="registerationObj.companyMail">
+                    <div class="errorMsg" 
+                      *ngIf="registerationObj.companyMail && companyMail.errors?.email && formSubmitted">
+                      Invalid Mail
+                    </div>
                   </mat-form-field>
               </div>
             </div>
-            <label class="flt">name</label>
+            <label class="flt" [class.invalidField]="!registerationObj.name && formSubmitted">
+              name*
+            </label>
             <mat-form-field class="flt w98p">
-              <input matInput type="text">
-              <div class="errorMsg"> </div>
+              <input matInput type="text" required name="name" [(ngModel)]="registerationObj.name">
             </mat-form-field>
             <div>
               <div class="flt w50p">
-                  <label>userName</label>
-                  <mat-form-field>
-                    <input matInput type="text" email="true">
-                    <div class="errorMsg"></div>
+                  <label [class.invalidField]="!registerationObj.userName && formSubmitted">
+                    userName*
+                  </label>
+                  <mat-form-field class="pt5">
+                    <input matInput type="text" email="true" #userMail="ngModel" 
+                      name="userName" required [(ngModel)]="registerationObj.userName">
+                    <div class="errorMsg" *ngIf="registerationObj.userName && userMail.errors?.email && formSubmitted">Invalid Mail </div>
                   </mat-form-field>  
               </div>
               <div class="flt w50p">
-                  <label>password</label>
-                  <mat-form-field>
-                    <input matInput type="password">
+                  <label [class.invalidField]="!registerationObj.password && formSubmitted">
+                    password*
+                  </label>
+                  <mat-form-field class="pt5">
+                    <input matInput type="password" name="password" required [(ngModel)]="registerationObj.password">
                     <div class="errorMsg"> </div>
                   </mat-form-field>
               </div>
             </div>
           </div>
+        </form>
       </mat-card-content>
       <mat-card-actions>
-              <button class="registerUser" mat-raised-button color="primary" (click)="registerUser()">Register</button>
+              <button class="registerUser" mat-raised-button color="primary" (click)="registerUser(registerationForm)">Register</button>
       </mat-card-actions>
   </mat-card>
+  <div class="errBanner" *ngIf="formSubmitted && !registerationForm.form.valid">
+    Please fill the fields marked with *
+  </div>
 </div>
