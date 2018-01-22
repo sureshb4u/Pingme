@@ -30,7 +30,17 @@ export class LoginComponent {
   submitForm(formObj){
     this.formSubmitted = true;
       if(formObj.controls.userName.valid && formObj.status !="INVALID"){
-         this.loginService.authenticate();
+        var data = {
+          "userid":"",
+          "password":""
+        };
+        data.userid=formObj.userName;
+        data.password=formObj.password;
+         this.loginService.authenticate(data).subscribe(res => {
+           if(res.code == "200 OK"){
+            this.signInUser();
+           }
+         });
       }
   }
   signInUser(){

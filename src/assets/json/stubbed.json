@@ -1,0 +1,62 @@
+{
+"orgid": 123456,
+"code": "200 OK",
+"msg": "Login success",
+"data": {
+		"_id": "5a520ac27895680124bf0d81",
+		"orgid": 123456,
+		"orgname": "Codette",
+		"orgphoneno": "9629400474",
+		"orgemail": "admin@gmail.in",
+		"userid": 1,
+		"groups": [{
+			"groupname": "G198989",
+			"contacts": [1, 2]
+		}, {
+			"groupname": "G2",
+			"contacts": [1, 2, "9629400474"]
+		}],
+		"contacts": [{
+			"id": 1,
+			"personname": "Selva",
+			"phone": [979789798, 5456645],
+			"email": ["", ""],
+			"dob": "",
+			"profession": ""
+		}, {
+			"id": 2,
+			"personname": "Selva",
+			"phone": [979789798, 5456645],
+			"email": ["", ""],
+			"dob": "",
+			"profession": ""
+		}, {
+			"id": 3,
+			"personname": "Selva",
+			"phone": [979789798, 5456645],
+			"email": ["", ""],
+			"dob": "",
+			"profession": ""
+		}],
+		"emailtempates": [{
+			"templatename": "T1",
+			"id": "13456",
+			"subject": "Subject",
+			"content": "Contentt"
+		}, {
+			"templatename": "T2",
+			"id": "13456",
+			"subject": "s2",
+			"content": "c22"
+		}],
+		"smstempates": [{
+			"templatename": "T1",
+			"id": "13456",
+			"msg": "hi helo world"
+		}, {
+			"templatename": "T2",
+			"id": "13456",
+			"msg": "hi hello world"
+		}]
+	}
+}
