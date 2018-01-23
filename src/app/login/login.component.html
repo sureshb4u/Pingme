@@ -11,9 +11,9 @@
                         <div>
                             <mat-icon class="mat18">person</mat-icon>
                             <mat-form-field>
-                                <input matInput type="text" formControlName="userName"  email="true">
+                                <input matInput type="text" formControlName="userName"  email="false">
                                 <div class="errorMsg" *ngIf="formSubmitted && !loginForm.controls['userName'].valid"> {{invalidEmail}} </div>
-                            </mat-form-field>
+                            </mat-form-field> 
                             
                         </div>
                     </div>
