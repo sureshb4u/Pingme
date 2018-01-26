@@ -12,6 +12,7 @@ export class LoginService {
 
 authenticate(data: Object): Observable<any> {
   var url = this.apiConfig.hostUrl+this.apiConfig.baseUrl+"login";
+  console.log('url ::'+url );
   return this.http.post<any>(url, data).pipe(
     tap((res) => console.log(res))
   );
