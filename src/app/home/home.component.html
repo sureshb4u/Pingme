@@ -1,0 +1,35 @@
+<div class="mainpage">
+  <div class="navigationBar">
+    <div class="appHeader">
+        Pingme
+    </div>
+    <div class="navigator" *ngIf="obj">
+        <div class="orgTitle">
+          {{obj.orgname}}
+        </div>
+        <div class="navigationMenu">
+          <div [routerLink]="[{outlets: {'aside': ['dashboard']}}]" routerLinkActive="active-link">
+              <mat-icon class="mat18">dashboard</mat-icon> dashboard
+          </div>
+          <div [routerLink]="[{outlets: {'aside': ['contacts']}}]" routerLinkActive="active-link">
+              <mat-icon class="mat18">contacts</mat-icon> contacts
+          </div>
+          <div>
+              <mat-icon class="mat18">groups</mat-icon> groups
+          </div>
+          <div>
+              <mat-icon class="mat18">email</mat-icon> mail templates
+          </div>
+          <div [routerLink]="[{outlets: {'aside': ['messages']}}]" routerLinkActive="active-link">
+              <mat-icon class="mat18">message</mat-icon> Message
+          </div>
+          <div>
+              <mat-icon class="mat18">person</mat-icon> profile
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="mainContainer">
+      <router-outlet name="aside"></router-outlet>
+  </div>
+  </div>

@@ -12,7 +12,7 @@ export class DashboardComponent implements OnInit {
   public obj: Object;
   ngOnInit() {
     var obj;
-    this.dashboardService.getJSON().subscribe(data => this.obj=data.data, error => console.log(error)) ;
+    
   }
 
 }

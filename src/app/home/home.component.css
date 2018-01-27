@@ -1,0 +1,55 @@
+.mainpage{
+    height: 100%;
+position: absolute;
+width: 100%;
+}
+.navigationBar{
+    width: 240px;
+    height: 100%;
+    padding: 20px;
+    background-color: #2b3145;
+    color: #fff;
+    font-family: "abeezee";
+    font-size: 14px;
+    float: left;
+    padding-left: 0px;
+    padding-bottom: 40px;
+    padding-right: 0px;
+}
+.mainContainer{
+    width: 80%;
+    height: 100%;
+    padding: 30px;
+    padding-right: 0px;
+    margin-left: 240px;
+    background-color: #fff;
+}
+.appHeader{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+.navigator{}
+.navigationMenu{
+    font-size: 16px;
+    margin-top: 30px;
+    text-align: left;
+    padding-left: 0px;
+}
+.navigationMenu div{
+    padding: 15px;
+    text-transform: capitalize;
+    color: #ACACAC;
+    padding-left: 25px;
+    
+}
+.navigationMenu mat-icon{top:3px;position: relative;}
+.navigationMenu div:hover,.active-link{
+    color: #FFFFFF !important;
+    background: rgb(54,144,240); /* Old browsers */
+    background: -moz-linear-gradient(left, rgba(54,144,240,1) 50%, rgba(30,105,222,1) 92%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(54,144,240,1) 50%,rgba(30,105,222,1) 92%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(54,144,240,1) 50%,rgba(30,105,222,1) 92%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}

@@ -14,6 +14,9 @@ import { RegisterationComponent } from './registeration/registeration.component'
 import { ApiConfigService } from './api-config.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardService } from './dashboard.service';
+import { ContactsComponent } from './contacts/contacts.component';
+import { HomeComponent } from './home/home.component';
+import { MessagesComponent } from './messages/messages.component';
 
 
 @NgModule({
@@ -21,7 +24,10 @@ import { DashboardService } from './dashboard.service';
     AppComponent,
     LoginComponent,
     RegisterationComponent,
-    DashboardComponent
+    DashboardComponent,
+    ContactsComponent,
+    HomeComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
