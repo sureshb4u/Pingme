@@ -1,0 +1,19 @@
+.messageContainer{
+    width: 97%;
+    background: #fff;
+    position: relative;
+}
+.messageContainer mat-card-content{
+    width: 500px;
+}
+.messageContainer mat-card{height: 300px;}
+.messageContainer mat-card-content{height: 250px;}
+.messageContainer mat-card-actions{padding-left: 16px;}
+.sendBtn{width: 49%;border-radius: 25px;background-color: #3B5999;}    
+.helperContainer{
+    padding-top: 25%;
+    width: 97%;
+}
+
+/*.helperContainer mat-card{padding-top: 25px;width: 50%;}
+.helperContainer mat-card-content{min-height: 300px;overflow-y: auto;}*/

@@ -17,6 +17,7 @@ import { DashboardService } from './dashboard.service';
 import { ContactsComponent } from './contacts/contacts.component';
 import { HomeComponent } from './home/home.component';
 import { MessagesComponent } from './messages/messages.component';
+import { MessageService } from './message.service';
 
 
 @NgModule({
@@ -43,7 +44,7 @@ import { MessagesComponent } from './messages/messages.component';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [LoginService, ApiConfigService, DashboardService],
+  providers: [LoginService, ApiConfigService, DashboardService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 

@@ -26,11 +26,28 @@ body{
     background-color: #F1F2F7;
     box-shadow: 0px 2px 5px 0px rgba(51, 47, 47, 0.3);
 }
+.custom.noIcon .mat-input-infix{
+    padding-left: 15px;
+}
+.custom.noIcon .mat-input-placeholder{
+    padding-left: 15px;
+    padding-top: 2px;
+}
 .custom .mat-input-element{
     top: 2px;
     position: relative;
     font-family: "Actor";
     font-weight: "bold";
+}
+.custom.box .mat-input-infix{
+    border-radius: 0px ;
+}
+.customTextarea .mat-input-infix{
+    height: 150px;
+    padding-top: 4px;
+}
+.customTextarea textarea{
+    height: 100%;
 }
 .loginCard mat-form-field{
     padding-top: 5px;

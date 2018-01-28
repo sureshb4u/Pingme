@@ -1,3 +1,50 @@
-<p>
-  messages works!
-</p>
+<div class="wrapperDiv">
+<div class="messageContainer">
+    <div class="filedContainer custom box noIcon">
+        <mat-card>
+            <mat-card-content>
+                <form #messageForm="ngForm" novalidate>
+                    <mat-form-field class="flt w98p" floatLabel="never">
+                        <input matInput type="text" required placeholder="Sender Text" 
+                         name="senderName" [(ngModel)]="messageObj.senderName">
+                    </mat-form-field>
+                    <mat-form-field class="flt w98p" floatLabel="never">
+                        <input matInput type="text" required placeholder="Recipient"
+                        name="recipient" [(ngModel)]="messageObj.recipient">
+                    </mat-form-field>
+                    <mat-form-field class="flt w98p customTextarea">
+                        <textarea matInput matTextareaAutosize name="messageContent"  required 
+                            [(ngModel)]="messageObj.messageContent"></textarea>    
+                    </mat-form-field>
+                </form>
+            </mat-card-content>
+            <mat-card-actions>
+                    <button *ngIf="messageForm.form.valid" class="sendBtn" mat-raised-button 
+                        color="primary" (click)="sendMessages(messageForm)">Send</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
+<!-- <div class="helperContainer">
+    <div class="contactContainer flt">
+        <mat-card>
+            <mat-card-header>
+                Contact
+            </mat-card-header>
+            <mat-card-content>
+
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="templateContainer flt">
+            <mat-card>
+                    <mat-card-header>
+                        Template
+                    </mat-card-header>
+                    <mat-card-content>
+        
+                    </mat-card-content>
+                </mat-card>
+    </div>
+</div> -->
+</div>
