@@ -4,7 +4,7 @@
 html,body{
     height: 100%;   
     margin: 0;
-   
+    overflow: hidden;
 }
 body{
     background-image:url('assets/images/bg.png');   
@@ -76,9 +76,52 @@ body{
 .w25p{width: 25%;}.w50p{width: 50%;}.w98p{width: 98%;}.w100p{width: 100%;}
 .pt5{padding-top:5px;}
 
+tag-input{padding-bottom: 15px;}
+.ng2-tags-container
+{
+    background-color: #efefef;
+    padding-left: 8px;
+    height: 34px;
+    box-shadow:0px 2px 5px 0px rgba(51, 47, 47, 0.3); 
 
-
-
+}
+tag{
+    border-radius: 5px !important;
+    background-color: #fff !important;
+    height: 25px !important;
+    line-height: 26px !important;
+    margin-top: 3px !important
+}
+tag:not(.readonly):not(.tag--editing):focus{
+    background-color: rgb(54,144,240) !important; /* Old browsers */
+    background-color: -moz-linear-gradient(left, rgba(54,144,240,1) 50%, rgba(30,105,222,1) 92%) !important; /* FF3.6-15 */
+    background-color: -webkit-linear-gradient(left, rgba(54,144,240,1) 50%,rgba(30,105,222,1) 92%) !important; /* Chrome10-25,Safari5.1-6 */
+    background-color: linear-gradient(to right, rgba(54,144,240,1) 50%,rgba(30,105,222,1) 92%)!important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    color:#fff;
+} 
+tag-input-form{
+    padding: 4px !important;
+}
+.ng2-tag-input__text-input{
+    background-color: #efefef;
+    height: 30px !important;
+}
+tag-input-form form{
+    top: 4px !important;
+    position: absolute !important;
+    height: 30px !important;
+}
+delete-icon svg
+{
+    height: 26px !important;
+}
+.tag__text inline{
+    height:25px !important;
+    }
+ .ng2-tag-input--focused,.ng2-tag-input{
+     border-bottom: none !important; 
+ }   
+.messageContainer .mat-form-field-wrapper{padding-bottom: 0px;}
 
 
 

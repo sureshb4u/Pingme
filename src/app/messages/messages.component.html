@@ -4,14 +4,14 @@
         <mat-card>
             <mat-card-content>
                 <form #messageForm="ngForm" novalidate>
+                    <tag-input [ngModel]="messageObj.recipient" class="w98p" name="recipient" placeholder="Recipient">
+                        <tag-input-dropdown [autocompleteItems]="contacts">
+                        </tag-input-dropdown>
+                    </tag-input>
                     <mat-form-field class="flt w98p" floatLabel="never">
                         <input matInput type="text" required placeholder="Sender Text" 
                          name="senderName" [(ngModel)]="messageObj.senderName">
-                    </mat-form-field>
-                    <mat-form-field class="flt w98p" floatLabel="never">
-                        <input matInput type="text" required placeholder="Recipient"
-                        name="recipient" [(ngModel)]="messageObj.recipient">
-                    </mat-form-field>
+                    </mat-form-field>  
                     <mat-form-field class="flt w98p customTextarea">
                         <textarea matInput matTextareaAutosize name="messageContent"  required 
                             [(ngModel)]="messageObj.messageContent"></textarea>    
@@ -25,8 +25,8 @@
         </mat-card>
     </div>
 </div>
-<!-- <div class="helperContainer">
-    <div class="contactContainer flt">
+<div class="helperContainer">
+    <div class="contactContainer">
         <mat-card>
             <mat-card-header>
                 Contact
@@ -36,7 +36,7 @@
             </mat-card-content>
         </mat-card>
     </div>
-    <div class="templateContainer flt">
+    <div class="templateContainer">
             <mat-card>
                     <mat-card-header>
                         Template
@@ -46,5 +46,5 @@
                     </mat-card-content>
                 </mat-card>
     </div>
-</div> -->
+</div>
 </div>

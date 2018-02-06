@@ -1,5 +1,5 @@
 .messageContainer{
-    width: 97%;
+    width: 98%;
     background: #fff;
     position: relative;
 }
@@ -7,13 +7,17 @@
     width: 500px;
 }
 .messageContainer mat-card{height: 300px;}
-.messageContainer mat-card-content{height: 250px;}
+.messageContainer mat-card-content{height: 251px;}
 .messageContainer mat-card-actions{padding-left: 16px;}
-.sendBtn{width: 49%;border-radius: 25px;background-color: #3B5999;}    
+.sendBtn{width: 48%;border-radius: 25px;background-color: #3B5999;}    
+.messageContainer .mat-form-field{padding-bottom: 15px;}
 .helperContainer{
-    padding-top: 25%;
-    width: 97%;
+    padding-top: 25px;
+    width: 98%;
+    display: inline-block;
 }
 
-/*.helperContainer mat-card{padding-top: 25px;width: 50%;}
-.helperContainer mat-card-content{min-height: 300px;overflow-y: auto;}*/
+.helperContainer .contactContainer,.templateContainer{width: 48.5%;float: left;}
+.helperContainer mat-card-content{min-height: 300px;overflow-y: auto;}
+.helperContainer .contactContainer{padding-right: 30px;}
+.customTextarea{padding-bottom: 0px !important;}

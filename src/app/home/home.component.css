@@ -4,7 +4,7 @@ position: absolute;
 width: 100%;
 }
 .navigationBar{
-    width: 240px;
+    width: 243px;
     height: 100%;
     padding: 20px;
     background-color: #2b3145;
@@ -18,11 +18,13 @@ width: 100%;
 }
 .mainContainer{
     width: 80%;
-    height: 100%;
+    height: calc(100% - 60px);
     padding: 30px;
     padding-right: 0px;
-    margin-left: 240px;
-    background-color: #f1f2f7;
+    margin-left: 243px;    
+    background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: screen;
+    overflow-y: auto;
 }
 .appHeader{
     font-size: 20px;
@@ -31,7 +33,7 @@ width: 100%;
     padding: 20px;
     text-align: center;
 }
-.navigator{}
+
 .navigationMenu{
     font-size: 16px;
     margin-top: 30px;

@@ -18,6 +18,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { HomeComponent } from './home/home.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
+import { TagInputModule } from 'ngx-chips';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { MessageService } from './message.service';
     MatToolbarModule,
     MatIconModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    TagInputModule
   ],
   providers: [LoginService, ApiConfigService, DashboardService, MessageService],
   bootstrap: [AppComponent]
