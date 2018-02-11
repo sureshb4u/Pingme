@@ -92,3 +92,13 @@
     font-family: "Actor";
     font-weight: bold;
 }
+.errBanner{    
+    text-align: center;
+    background: rgba(197, 23, 23, 0.77);
+    color: #fff;
+    animation: 1s ease-out 0s 1 fallDown;
+    height: 30px;
+    font-family: "Actor";
+    font-size: 14px;
+    padding-top: 10px;
+}

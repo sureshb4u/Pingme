@@ -3,6 +3,8 @@
 
 html,body{
     height: 100%;   
+    width: 100%;
+    position: absolute;
     margin: 0;
     overflow: hidden;
 }
@@ -162,4 +164,12 @@ delete-icon svg
 @font-face {
     font-family: "abeezee-italic";
     src: url("/assets/fonts/abeezee/ABeeZee-Italic.ttf.ttf");
+}
+@keyframes fallDown{
+    0% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }

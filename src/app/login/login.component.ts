@@ -15,7 +15,8 @@ export class LoginComponent {
   public invalidEmail: string = Constants.INVALID_EMAIL;
   public invalidPassword: string = Constants.INVALID_PASSWORD;
   public formSubmitted :boolean = false;
-
+  public loginFailure :boolean = false;
+  
   constructor(
    private fb: FormBuilder,
    private loginService: LoginService,
@@ -29,24 +30,25 @@ export class LoginComponent {
 
   submitForm(formObj){
     this.formSubmitted = true;
-
-      if(formObj.controls.userName.valid && formObj.status !="INVALID"){
-        var data = {
-          "userid":"",
-          "password":""
-        };
-        data.userid=formObj.controls.userName.value;
-        data.password=formObj.controls.password.value;
-        //console.log('formObj.userName ---'+formObj.controls.userName.value+'  formObj.password'+formObj.controls.password.value);
-         this.loginService.authenticate(data).subscribe(res => {
-           if(res.code == "200 OK"){
-            this.signInUser();
-           }
-         });
-      }
   }
-  signInUser(){
-    console.log("Login Successfull");
+  signInUser(formObj){
+    if(formObj.status !="INVALID"){
+      var data = {
+        "userid":"",
+        "password":""
+      };
+      data.userid=formObj.controls.userName.value;
+      data.password=formObj.controls.password.value;
+      //console.log('formObj.userName ---'+formObj.controls.userName.value+'  formObj.password'+formObj.controls.password.value);
+       this.loginService.authenticate(data).subscribe(res => {
+         if(res.code == "200 OK"){
+          this.router.navigate(["/home"]);
+         }else{
+            this.loginFailure = true;
+         }
+       });
+    }
+    
   }
 
   registerUser(){

@@ -39,7 +39,11 @@
                 </div>
             </form>
         </mat-card-content>
+        <div class="errBanner" *ngIf="formSubmitted && loginFailure">
+            Invalid username or password
+          </div>
     </mat-card>
+    
     <div class="registrationContainer">
         <mat-card class="registrationCard">
             <mat-card-header>
@@ -59,5 +63,6 @@
                     <button mat-raised-button color="primary" (click)="registerUser()">Register</button>
             </mat-card-actions>
         </mat-card>
+        
     </div>
 </div>

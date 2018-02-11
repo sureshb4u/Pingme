@@ -10,7 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./registeration.component.css']
 })
 export class RegisterationComponent implements OnInit {
-  public messageObj: object = {};
+  public registerationObj: object = {};
   public formSubmitted:boolean = false;
   public validateEmail:boolean = false;
   constructor(private config:ApiConfigService) { }

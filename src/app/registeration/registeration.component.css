@@ -59,11 +59,3 @@
     padding-top: 10px;
 }
 
-@keyframes fallDown{
-    0% {
-        transform: translateY(-50%);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
