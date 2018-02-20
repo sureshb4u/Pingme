@@ -3,20 +3,32 @@
     <div class="filedContainer custom box noIcon">
         <mat-card>
             <mat-card-content>
-                <form #messageForm="ngForm" novalidate>
-                    <tag-input [ngModel]="messageObj.recipient" class="w98p" name="recipient" placeholder="Recipient">
-                        <tag-input-dropdown [autocompleteItems]="contacts">
-                        </tag-input-dropdown>
-                    </tag-input>
-                    <mat-form-field class="flt w98p" floatLabel="never">
-                        <input matInput type="text" required placeholder="Sender Text" 
-                         name="senderName" [(ngModel)]="messageObj.senderName">
-                    </mat-form-field>  
-                    <mat-form-field class="flt w98p customTextarea">
-                        <textarea matInput matTextareaAutosize name="messageContent"  required 
-                            [(ngModel)]="messageObj.messageContent"></textarea>    
-                    </mat-form-field>
-                </form>
+                <div class="messageWrapper">
+                    <form #messageForm="ngForm" novalidate>
+                        <tag-input [ngModel]="messageObj.recipient" class="w98p" name="recipient"
+                         placeholder="Recipient">
+                            <tag-input-dropdown [autocompleteItems]="contacts">
+                            </tag-input-dropdown>
+                        </tag-input>
+                        <mat-form-field class="w98p" floatLabel="never">
+                            <input matInput type="text" required placeholder="Sender Text" 
+                                name="senderName" [(ngModel)]="messageObj.senderName">
+                        </mat-form-field>  
+                        <mat-form-field class="w98p customTextarea">
+                            <textarea matInput matTextareaAutosize name="messageContent"  required 
+                                [(ngModel)]="messageObj.messageContent"></textarea>    
+                        </mat-form-field>
+                    </form>
+                </div>
+                <div class="templateContainer">
+                    <div class="templateWrapper">
+                        <div *ngFor="let template of messageTemplate">
+                            <div class="templateList">
+                                {{template.msg}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </mat-card-content>
             <mat-card-actions>
                     <button *ngIf="messageForm.form.valid" class="sendBtn" mat-raised-button 
@@ -32,19 +44,10 @@
                 Contact
             </mat-card-header>
             <mat-card-content>
-
+                <loaders-css [loader]="'ball-pulse'" [loaderClass]="'my-loader'"></loaders-css>
             </mat-card-content>
         </mat-card>
     </div>
-    <div class="templateContainer">
-            <mat-card>
-                    <mat-card-header>
-                        Template
-                    </mat-card-header>
-                    <mat-card-content>
-        
-                    </mat-card-content>
-                </mat-card>
-    </div>
+   
 </div>
 </div>

@@ -3,13 +3,10 @@
     background: #fff;
     position: relative;
 }
-.messageContainer mat-card-content{
-    width: 500px;
-}
 .messageContainer mat-card{height: 300px;}
-.messageContainer mat-card-content{height: 251px;}
+.messageContainer mat-card-content{height: 261px;width: 100%;display: inline-flex;}
 .messageContainer mat-card-actions{padding-left: 16px;}
-.sendBtn{width: 48%;border-radius: 25px;background-color: #3B5999;}    
+.sendBtn{width: 48%;border-radius: 25px;background-color: #3B5999;min-width: 400px;}    
 .messageContainer .mat-form-field{padding-bottom: 15px;}
 .helperContainer{
     padding-top: 25px;
@@ -17,7 +14,24 @@
     display: inline-block;
 }
 
-.helperContainer .contactContainer,.templateContainer{width: 48.5%;float: left;}
+.helperContainer .contactContainer{width: 48.5%;float: left;}
 .helperContainer mat-card-content{min-height: 300px;overflow-y: auto;}
 .helperContainer .contactContainer{padding-right: 30px;}
 .customTextarea{padding-bottom: 0px !important;}
+.messageWrapper,.templateContainer{
+    width: 49%;
+    min-width: 400px;
+    display: inline-block;
+}
+.messageWrapper{margin-right: 18px;}
+.templateContainer{
+    padding: 8px;
+    border: 1px solid #eeee;
+}
+.templateList{
+    height: 30px;
+    text-align: left;
+    font-family: abeezee;
+    font-weight: bold;
+    border-bottom: 1px solid #2E2E2E;
+}

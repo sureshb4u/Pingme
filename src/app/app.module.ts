@@ -19,6 +19,7 @@ import { HomeComponent } from './home/home.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
 import { TagInputModule } from 'ngx-chips';
+import { LoadersCssModule } from 'angular2-loaders-css';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { TagInputModule } from 'ngx-chips';
     MatIconModule,
     ReactiveFormsModule,
     FormsModule,
-    TagInputModule
+    TagInputModule,
+    LoadersCssModule
   ],
   providers: [LoginService, ApiConfigService, DashboardService, MessageService],
   bootstrap: [AppComponent]

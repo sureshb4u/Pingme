@@ -16,7 +16,7 @@ export class LoginComponent {
   public invalidPassword: string = Constants.INVALID_PASSWORD;
   public formSubmitted :boolean = false;
   public loginFailure :boolean = false;
-  
+  public loader:boolean = false;
   constructor(
    private fb: FormBuilder,
    private loginService: LoginService,
@@ -33,6 +33,7 @@ export class LoginComponent {
   }
   signInUser(formObj){
     if(formObj.status !="INVALID"){
+      this.loader = true;
       var data = {
         "userid":"",
         "password":""
@@ -43,8 +44,10 @@ export class LoginComponent {
        this.loginService.authenticate(data).subscribe(res => {
          if(res.code == "200 OK"){
           this.router.navigate(["/home"]);
+          this.loader = false;
          }else{
             this.loginFailure = true;
+            this.loader = false;
          }
        });
     }

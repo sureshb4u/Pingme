@@ -1,4 +1,7 @@
-<div class="loginContainer"> 
+<div class="loaderContainer" *ngIf="loader">
+        <loaders-css [loader]="'ball-rotate'" [loaderClass]="'page-loader'"></loaders-css>
+    </div>
+<div class="loginContainer" [class.focusOut]="loader">
     <mat-card class="loginCard custom">
         <mat-card-header>
             <mat-card-title>Sign in</mat-card-title>

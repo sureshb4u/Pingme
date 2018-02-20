@@ -14,19 +14,32 @@ export class MessagesComponent implements OnInit {
     [{display: 'selva', value: 987461354620},{display: 'vignesh', value: 987461353548},
     {display: 'shan', value: 9874664620}]
   ;
+  public messageTemplate: object =  [
+    {
+      "templatename": "T1",
+      "id": "13456",
+      "msg": "hi helo world"
+    },
+    {
+      "templatename": "T2",
+      "id": "13456",
+      "msg": "hi hello world"
+    }
+  ]
+
   constructor(private msgervice:MessageService) { }
 
   sendMessages(messageForm){
     this.formSubmitted = true;
     if(messageForm.status !="INVALID"){
       this.msgervice.sendMessages(this.messageObj).subscribe(res => {
-        
       });
     }
   }
 
 
   ngOnInit() {
+
   }
 
 }
